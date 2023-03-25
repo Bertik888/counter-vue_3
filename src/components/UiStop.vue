@@ -1,7 +1,6 @@
 <template>
-  <div class="ui-counter-block__item">
-
-    <div class="ui-counter-block__stop">
+  <div class="ui-counter-block__stop">
+    <button class="btn">
       <svg 
         width="20" 
         height="20" 
@@ -15,8 +14,7 @@
           fill="#9E9E9E"
         />
       </svg>
-    </div>
-    
+    </button>
   </div>
 </template>
 

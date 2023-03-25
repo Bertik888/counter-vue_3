@@ -10,7 +10,15 @@
 
       <div class="ui-counter-block__item">
 
-        <div class="ui-counter-block__play">
+        <ui-play 
+          class="my-play"
+        />
+
+        <ui-stop
+          class="my-stop"
+        />
+
+        <!-- <div class="ui-counter-block__play">
           <svg 
             width="17" 
             height="20" 
@@ -23,10 +31,10 @@
               fill="#9E9E9E"
             />
           </svg>  
-        </div>      
+        </div> -->      
       
 
-        <div class="ui-counter-block__stop">
+        <!-- <div class="ui-counter-block__stop">
           <svg 
             width="20" 
             height="20" 
@@ -40,7 +48,7 @@
               fill="#9E9E9E"
             />
           </svg>
-        </div>
+        </div> -->
 
       </div><!-- //ui-counter-block__item -->      
     </div>
@@ -56,7 +64,15 @@
 
       <div class="ui-counter-block__item">
 
-        <div class="ui-counter-block__pause">
+        <ui-pause
+          class="my-pause"
+        />
+
+        <ui-stop
+          class="my-stop"
+        />
+
+        <!-- <div class="ui-counter-block__pause">
 
           <div class="ui-counter-block__pause_left">
             <svg 
@@ -82,10 +98,10 @@
             </svg>
           </div>
  
-        </div>      
+        </div> -->      
       
 
-        <div class="ui-counter-block__stop">
+        <!-- <div class="ui-counter-block__stop">
           <svg 
             width="20" 
             height="20" 
@@ -99,7 +115,7 @@
               fill="#9E9E9E"
             />
           </svg>
-        </div>
+        </div> -->
 
       </div><!-- //ui-counter-block__item -->      
     </div>
@@ -107,7 +123,22 @@
 </template>
 
 <script>
+import UiPlay from '@/components/UiPlay.vue'
+import UiStop from '@/components/UiStop.vue'
+import UiPause from '@/components/UiPause.vue'
+
+
+
+
   export default {
+    name: 'UiCounter',
+
+    components: {
+      UiPlay,
+      UiStop,
+      UiPause
+
+    },
     
   }
 </script>
@@ -120,6 +151,10 @@ $control-color: #FFFFFF;
 $counter-color-bg: #696969;
 
 $counter-border: 1px solid #9E9E9E;
+
+// $btn: border: none;
+// $btn: outline: none;  // как правильно написать ? 
+// $btn: background: none;
 
 .ui-counter-block {
   width: 225px;
@@ -145,30 +180,9 @@ $counter-border: 1px solid #9E9E9E;
   &__item {
     display: flex;
     justify-content: space-evenly;
+    flex-shrink: 0;
+    cursor: pointer;
 
-  }
-
-  &__pause {
-    // display: flex;
-    // justify-content: space-between;
-
-    position: relative;    
-    width: 3px;
-    height: 20px;
-    background: $control-color;
-  }
-
-  &__pause_left {
-
-  }
-
-  &__pause_right {
-    position: absolute;
-  width: 3px;
-  height: 20px;
-  top: 0;
-  right: 0;
-    
   }
 }
 
