@@ -1,13 +1,21 @@
 <template>
   <div class="timer">   
-
-    1:20:35 
+    {{ time }}
+    
+    <!-- 1:20:35  -->
   </div>
 </template>
 
 <script>
   export default {
-    name: 'UiTimer'
+    name: 'UiTimer',
+
+    props: {
+      time: {
+        type: Number,
+        default: '${hour}:${minute}:${second}'
+      }
+    }
     
   }
 </script>

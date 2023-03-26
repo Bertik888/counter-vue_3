@@ -1,6 +1,10 @@
 <template>
   <div class="ui-counter-block__play">
-    <button class="btn">
+    <button 
+      :value="modelValue"
+      @click.prevent="startButton"
+      class="btn">
+
       <svg 
         width="17" 
         height="20" 
@@ -20,6 +24,39 @@
 <script>
   export default {
     name: 'UiPlay',
+
+    methods: { 
+      /* startButton() {
+        clearInterval(interval)
+        interval = setInterval(startTimer, 10)
+        console.log(interval)
+      }, */
+
+
+
+      /* async startTimer() {
+        function startTimer() {
+          try{ 
+            if(second < 9) {
+              secondElement.innerText = "0" + second
+            }
+            if(second > 9) {
+              secondElement.innerText = second
+            }
+            if(second > 59) {
+              minute++
+              minuteElement.innerText = "0" + minute
+              second = 0
+              secondElement.innerText = "0" + second
+            }
+          } catch (e) {
+            console.error(e)
+          }
+        }
+      } */
+
+
+    },
     
   }
 </script>

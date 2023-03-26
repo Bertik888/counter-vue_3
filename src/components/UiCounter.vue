@@ -6,7 +6,9 @@
     <div class="ui-counter-block">
       <div class="ui-counter-block__time">
         <ui-timer 
+          
           class="my-timer"
+
           
         />
 
@@ -16,52 +18,23 @@
 
         <ui-play 
           class="my-play"
+          v-model="form.name.value"
         />
 
         <ui-stop
           class="my-stop"
         />
 
-        <!-- <div class="ui-counter-block__play">
-          <svg 
-            width="17" 
-            height="20" 
-            viewBox="0 0 17 20" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path 
-              d="M0 20V0L17 10L0 20Z" 
-              fill="#9E9E9E"
-            />
-          </svg>  
-        </div> -->      
-      
+      </div>
 
-        <!-- <div class="ui-counter-block__stop">
-          <svg 
-            width="20" 
-            height="20" 
-            viewBox="0 0 20 20" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect 
-              width="20" 
-              height="20" 
-              fill="#9E9E9E"
-            />
-          </svg>
-        </div> -->
-
-      </div><!-- //ui-counter-block__item -->      
     </div>
 
     <div>  
       <p>Включеный счётчик</p> 
     </div>
 
-    <div class="ui-counter-block">
+    <div class="ui-counter-block">   
+
       <div class="ui-counter-block__time">
         1:20:36
       </div>
@@ -75,53 +48,8 @@
         <ui-stop
           class="my-stop"
         />
+      </div>   
 
-        <!-- <div class="ui-counter-block__pause">
-
-          <div class="ui-counter-block__pause_left">
-            <svg 
-              width="3" 
-              height="20" 
-              viewBox="0 0 3 20" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="3" height="20" fill="white"/>
-            </svg>
-          </div>
-
-          <div class="ui-counter-block__pause_right">
-            <svg 
-              width="3" 
-              height="20" 
-              viewBox="0 0 3 20" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="3" height="20" fill="white"/>
-            </svg>
-          </div>
- 
-        </div> -->      
-      
-
-        <!-- <div class="ui-counter-block__stop">
-          <svg 
-            width="20" 
-            height="20" 
-            viewBox="0 0 20 20" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect 
-              width="20" 
-              height="20" 
-              fill="#9E9E9E"
-            />
-          </svg>
-        </div> -->
-
-      </div><!-- //ui-counter-block__item -->      
     </div>   
 
     <div class="ui-counter-block">
@@ -142,11 +70,6 @@ import UiPause from '@/components/UiPause.vue'
 import UiAddButton from '@/components/UiAddButton.vue'
 import UiTimer from '@/components/UiTimer.vue'
 
-
-
-
-
-
   export default {
     name: 'UiCounter',
 
@@ -156,9 +79,17 @@ import UiTimer from '@/components/UiTimer.vue'
       UiPause,
       UiAddButton,
       UiTimer
-
     },
     
+    data() {
+      return {
+        form: {
+          name: {
+            value: '',
+          }
+        }
+      }
+    }
   }
 </script>
 
