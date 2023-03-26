@@ -5,7 +5,11 @@
 
     <div class="ui-counter-block">
       <div class="ui-counter-block__time">
-        1:20:35
+        <ui-timer 
+          class="my-timer"
+          
+        />
+
       </div>
 
       <div class="ui-counter-block__item">
@@ -118,6 +122,15 @@
         </div> -->
 
       </div><!-- //ui-counter-block__item -->      
+    </div>   
+
+    <div class="ui-counter-block">
+      <div class="ui-counter-block__item">
+
+        <ui-add-button 
+        class="my-add"/>
+
+      </div>
     </div>
 
 </template>
@@ -126,6 +139,10 @@
 import UiPlay from '@/components/UiPlay.vue'
 import UiStop from '@/components/UiStop.vue'
 import UiPause from '@/components/UiPause.vue'
+import UiAddButton from '@/components/UiAddButton.vue'
+import UiTimer from '@/components/UiTimer.vue'
+
+
 
 
 
@@ -136,7 +153,9 @@ import UiPause from '@/components/UiPause.vue'
     components: {
       UiPlay,
       UiStop,
-      UiPause
+      UiPause,
+      UiAddButton,
+      UiTimer
 
     },
     
@@ -181,7 +200,6 @@ $counter-border: 1px solid #9E9E9E;
     display: flex;
     justify-content: space-evenly;
     flex-shrink: 0;
-    cursor: pointer;
 
   }
 }

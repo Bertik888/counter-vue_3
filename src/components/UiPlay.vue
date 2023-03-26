@@ -30,6 +30,8 @@
   border: none;
   outline: none;
   background: none;
+  align-items: center;
+  cursor: pointer;
 }
 
 </style>
